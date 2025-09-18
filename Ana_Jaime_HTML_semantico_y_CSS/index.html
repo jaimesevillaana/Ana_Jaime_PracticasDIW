@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestión de MACs - IES Gregorio Prieto</title>
+
+        <!-- archivo CSS externo -->  
+        <link rel="stylesheet" href="estilos.css">
+
+        <!-- archivo CSS interno --> 
+         <style>
+            header h1 {
+                color: rgb(250, 250, 250);
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 1rem;
+            }
+            table th, table td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+         </style>
+    </head>
+    <body>
+        <header>
+            <h1>Registro de Direcciones MACs</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#registro">Registro de MAC</a></li>
+                    <li><a href="#lista">Lista de MACs</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Selección del aula --> 
+             <section>
+                <h2>Seleccionar clase</h2>
+                <form>
+                    <label for="clase">Clase:</label>
+                    <select name="Clase" id="clase">
+                        <option value="1daw">1º DAW</option>
+                        <option value="2daw">2º DAW</option>
+                        <option value="profes">Profesores</option>
+                    </select>
+                    <button type="submit">Cargar</button>
+                </form>
+             </section>
+
+             <!-- Listado de MACs --> 
+              <section>
+                <h2>MACs Registradas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dirección MAC</th>
+                            <th>Comentario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>74:56:3C:59:E1:1D</td>
+                            <td>PC_1DAW1</td>
+                            <td>
+                                <button style="color: red;">Eliminar</button>
+                                <button>Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+              </section>
+
+              <!-- Formulario para añadir MACs -->
+               <section>
+                <h2>Añadir Nueva MAC</h2>
+                <form>
+                    <label for="mac">Dirección MAC:</label>
+                    <input type="text" id="mac" name="mac" placeholder="ej: 74:56:3C:59:E1:1D" required>
+
+                    <label for="comentario">Comentario:</label>
+                    <input type="text" id="comentario" name="comentario" placeholder="ej: Portatil Ana" required>
+
+                    <button type="submit">Añadir</button>
+                </form>
+               </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Departamento de Informática. IES Gregorio Prieto</p>
+        </footer>
+    </body>
+</html>
+        
