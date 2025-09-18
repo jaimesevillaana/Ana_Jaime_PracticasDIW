@@ -1,0 +1,56 @@
+doctype html 
+html(lang="es")
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Gestion de MACs - IES Gregorio Prieto
+
+        link(rel="stylesheet" href="styles.css")
+
+    body
+        header
+            h1 Registro de Direcciones MACs
+            nav
+                ul
+                    li: a(href="#inicio") Inicio
+                    li: a(href="#registro") Registro de MAC
+                    li: a(href="#lista") Lista de MACs
+
+    main 
+        section 
+            h2 Seleccionar clase
+            form 
+                label(for"clase") Clase;
+                select(name="clase" id="clase")
+                    option(value="1daw") 1º DAW
+                    option(value="2daw") 2º DAW
+                    option(value="profes") Profesores
+                button (type="submit") Cargar  
+        section 
+            h2 MACs Registradas 
+            table   
+                thead 
+                    tr 
+                        th Dirección MAC
+                        th Comentario
+                        th Acciones
+                tbody 
+                    tr 
+                        td 74:56:3C:59:E1:1D
+                        td PC_1DAW1
+                        td 
+                            button(type="button") Eliminar
+                            button(type="button") Editar
+        section  
+            h2 Añadir Nueva MAC
+            form
+                label(for="mac") Dirección MAC:
+                input(type="text" id="mac" name="mac" placeholder="ej: 74:56:3C:59:E1:1D" required)
+                
+                label(for="comentario") Comentario:
+                input(type="text" id="comentario" name="comentario" placeholder="Ej: Portatil Ana" required)
+                
+                button(type="submit") Añadir 
+    footer 
+        p &copy; 2025 Deparrtamento de Informática. IES Gregorio Prieto. 
+        
