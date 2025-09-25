@@ -133,14 +133,14 @@ table {
   border-collapse: collapse;
   margin-top: 1rem;
   th, td {
-    border: 1px solid $gris-claro;
+    border: 1px solid $texto;
     padding: 8px;
-    text-align: left;
+    text-align: center;
   }
   th {
     background: $azul-oscuro;
     color: white;
-    text-align: left;
+    text-align: center;
   }
 }
 
