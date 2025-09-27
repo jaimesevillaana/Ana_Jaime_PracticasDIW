@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  section#lista-ip
+    h2 IPs Registradas
+    table
+      thead
+        tr
+          th Dirección IP
+          th Comentario
+          th Acciones
+      tbody
+        tr
+          td 192.168.1.101
+          td Servidor Aula
+          td
+            button.btn-eliminar Eliminar
+            button.btn-editar Editar
+        tr
+          td 192.168.1.102
+          td Portátil María
+          td
+            button.btn-eliminar Eliminar
+            button.btn-editar Editar
+
+  section#registro-ip
+    h2 Añadir Nueva IP
+    form
+      fieldset
+        legend Formulario de alta
+        label(for="ip") Dirección IP:
+        input(type="text" id="ip" name="ip" placeholder="Ej: 192.168.1.150" required)
+        label(for="comentario") Comentario:
+        input(type="text" id="comentario" name="comentario" placeholder="Ej: PC Aula 2" minlength="3" maxlength="50" required)
+        button.btn-primario(type="submit") Añadir

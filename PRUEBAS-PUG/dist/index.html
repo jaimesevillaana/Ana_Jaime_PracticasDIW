@@ -1,0 +1,86 @@
+
+<Doctype>html </Doctype><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Redes - IES Gregorio Prieto</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <header>
+      <h1>Gestión de Redes</h1>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/macs">MACs</a></li>
+          <li><a href="/ips">IPs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio">
+        <h2>Seleccionar clase</h2>
+        <form>
+          <fieldset>
+            <legend>Elige el aula a gestionar</legend>
+            <label for="clase">Clase:</label>
+            <select name="clase" id="clase" required>
+              <option value="" disabled selected>-- Selecciona una clase --</option>
+              <option value="1daw">1º DAW</option>
+              <option value="2daw">2º DAW</option>
+              <option value="profes">Profesores</option>
+            </select>
+            <button class="btn-primario" type="submit">Cargar</button>
+          </fieldset>
+        </form>
+      </section>
+      <section id="lista">
+        <h2>MACs Registradas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Dirección MAC</th>
+              <th>Comentario</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>74:56:3C:59:E1:1D</td>
+              <td>PC_1DAW1</td>
+              <td>
+                <button class="btn-eliminar">Eliminar</button>
+                <button class="btn-editar">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>88:9F:FA:23:45:BC</td>
+              <td>Portátil Ana</td>
+              <td>
+                <button class="btn-eliminar">Eliminar</button>
+                <button class="btn-editar">Editar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="registro">
+        <h2>Añadir Nueva MAC</h2>
+        <form>
+          <fieldset>
+            <legend>Formulario de alta</legend>
+            <label for="mac">Dirección MAC:</label>
+            <input type="text" id="mac" name="mac" placeholder="Ej: 74:56:3C:59:E1:1D" required>
+            <label for="comentario">Comentario:</label>
+            <input type="text" id="comentario" name="comentario" placeholder="Ej: Portátil Juan" minlength="3" maxlength="50" required>
+            <button class="btn-primario" type="submit">Añadir</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Departamento de Informática. IES Gregorio Prieto</p>
+    </footer>
+  </body>
+</html>

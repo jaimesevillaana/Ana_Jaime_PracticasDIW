@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  section#inicio
+    h2 Seleccionar clase
+    form
+      fieldset
+        legend Elige el aula a gestionar
+        label(for="clase") Clase:
+        select(name="clase" id="clase" required)
+          option(value="" disabled selected) -- Selecciona una clase --
+          option(value="1daw") 1º DAW
+          option(value="2daw") 2º DAW
+          option(value="profes") Profesores
+        button.btn-primario(type="submit") Cargar
+
+  section#lista
+    h2 MACs Registradas
+    table
+      thead
+        tr
+          th Dirección MAC
+          th Comentario
+          th Acciones
+      tbody
+        tr
+          td 74:56:3C:59:E1:1D
+          td PC_1DAW1
+          td
+            button.btn-eliminar Eliminar
+            button.btn-editar Editar
+        tr
+          td 88:9F:FA:23:45:BC
+          td Portátil Ana
+          td
+            button.btn-eliminar Eliminar
+            button.btn-editar Editar
+
+  section#registro
+    h2 Añadir Nueva MAC
+    form
+      fieldset
+        legend Formulario de alta
+        label(for="mac") Dirección MAC:
+        input(type="text" id="mac" name="mac" placeholder="Ej: 74:56:3C:59:E1:1D" required)
+        label(for="comentario") Comentario:
+        input(type="text" id="comentario" name="comentario" placeholder="Ej: Portátil Juan" minlength="3" maxlength="50" required)
+        button.btn-primario(type="submit") Añadir
