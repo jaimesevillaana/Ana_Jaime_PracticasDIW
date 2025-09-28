@@ -1,20 +1,20 @@
 
-<Doctype>html </Doctype><!DOCTYPE html>
+<Doctype>html </Doctype>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Gestión de Redes - IES Gregorio Prieto</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css"/>
   </head>
   <body>
     <header>
       <h1>Gestión de Redes</h1>
       <nav aria-label="Menú principal">
         <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/macs">MACs</a></li>
-          <li><a href="/ips">IPs</a></li>
+          <li><a href="layout.html">Inicio</a></li>
+          <li><a href="index.html">MACs</a></li>
+          <li><a href="ips.html">IPs</a></li>
         </ul>
       </nav>
     </header>
@@ -25,8 +25,8 @@
           <fieldset>
             <legend>Elige el aula a gestionar</legend>
             <label for="clase">Clase:</label>
-            <select name="clase" id="clase" required>
-              <option value="" disabled selected>-- Selecciona una clase --</option>
+            <select name="clase" id="clase" required="required">
+              <option value="" disabled="disabled" selected="selected">-- Selecciona una clase --</option>
               <option value="1daw">1º DAW</option>
               <option value="2daw">2º DAW</option>
               <option value="profes">Profesores</option>
@@ -71,9 +71,9 @@
           <fieldset>
             <legend>Formulario de alta</legend>
             <label for="mac">Dirección MAC:</label>
-            <input type="text" id="mac" name="mac" placeholder="Ej: 74:56:3C:59:E1:1D" required>
+            <input type="text" id="mac" name="mac" placeholder="Ej: 74:56:3C:59:E1:1D" required="required"/>
             <label for="comentario">Comentario:</label>
-            <input type="text" id="comentario" name="comentario" placeholder="Ej: Portátil Juan" minlength="3" maxlength="50" required>
+            <input type="text" id="comentario" name="comentario" placeholder="Ej: Portátil Juan" minlength="3" maxlength="50" required="required"/>
             <button class="btn-primario" type="submit">Añadir</button>
           </fieldset>
         </form>
