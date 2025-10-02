@@ -1,0 +1,64 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Gestión de MACs - IES Gregorio Prieto
+    link(rel="stylesheet" href="estilos.css")
+  body
+    header.header
+      h1.header__title Registro de Direcciones MACs
+      nav.header(aria-label="Menú principal")
+        ul.nav__list
+          li.nav__item
+            a.nav__link(href="#inicio") Inicio
+          li.nav__item
+            a.nav__link(href="#registro") Registro de MAC
+          li.nav__item
+            a.nav__link(href="#lista") Lista de MACs
+    main.main
+      section.clase#inicio
+        h2.clase__title Seleccionar clase
+        form.clase__form
+          fieldset.clase__fieldset
+            legend.clase__legend Elige el aula a gestionar
+            label.clase__label(for="clase") Clase:
+            select.clase select (name="clase" id="clase" required)
+              option(value="" disabled selected) -- Selecciona una clase --
+              option(value="1daw") 1º DAW
+              option(value="2daw") 2º DAW
+              option(value="profes") Profesores
+            button.btn.btn--primario(type="submit" style="font-style: italic;") Cargar
+      section.lista#lista
+        h2.lista__title MACs Registradas
+        table.tabla
+          thead.tabla__head
+            tr.tabla__row
+              th.tabla__cell(tabla__cell--header scope="col") Dirección MAC
+              th.tabla__cell(tabla__cell--header scope="col") Comentario
+              th.tabla__cell(tabla__cell--header scope="col") Acciones
+          tbody.tabla__body
+            tr.tabla__row
+              td.tabla__cell 74:56:3C:59:E1:1D
+              td.tabla__cell PC_1DAW1
+              td.tabla__cell
+                button.btn.btn--eliminar Eliminar
+                button.btn.btn--editar Editar
+            tr.tabla__row
+              td.tabla__cell 88:9F:FA:23:45:BC
+              td.tabla__cell Portátil Ana
+              td.tabla__cell
+                button.btn.btn--eliminar Eliminar
+                button.btn.btn--editar Editar
+      section.registro#registro
+        h2.registro__title Añadir Nueva MAC
+        form.registro__form
+          fieldset.registro__fieldset
+            legend.registro__legend Formulario de alta
+            label.registro__label(for="mac") Dirección MAC:
+            input.registro__input(type="text" id="mac" name="mac" placeholder="Ej: 74:56:3C:59:E1:1D" pattern="^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$" required)
+            label.registro__label(for="comentario") Comentario:
+            input.registro__input(type="text" id="comentario" name="comentario" placeholder="Ej: Portátil Juan" minlength="3" maxlength="50" required)
+            button.btn.btn--primario(type="submit") Añadir
+    footer.footer
+      p.footer__text © 2025 Departamento de Informática. IES Gregorio Prieto
