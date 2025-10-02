@@ -14,18 +14,19 @@ main {
   border-radius: 8px;
 }
 
-header {
+.header {
   background: #002f6c;
   color: white;
   padding: 1rem;
   text-align: center;
 }
-header h1 {
+.header__title {
   color: white;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-header nav ul {
+
+.nav__list {
   list-style: none;
   display: flex;
   gap: 1.5rem;
@@ -33,32 +34,29 @@ header nav ul {
   padding: 0;
   margin: 1rem 0 0;
 }
-header nav ul a {
+.nav__link {
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: color 0.3s;
 }
-header nav ul a:hover {
+.nav__link:hover {
   color: #0066ff;
 }
 
-section {
+.clase {
   margin: 2rem 0;
 }
-
-h2 {
+.clase__title {
   color: #002f6c;
   margin-bottom: 1rem;
 }
-
-form label {
+.clase__label {
   display: block;
   margin-top: 0.3rem;
   font-weight: bold;
 }
-
-input, select {
+.clase select {
   margin-top: 0.3rem;
   padding: 0.6rem;
   border: 1px solid #333;
@@ -68,80 +66,87 @@ input, select {
   max-width: 400px;
 }
 
-button, .btn-primario {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #0066ff;
-  color: white;
-  cursor: pointer;
-  width: 100px;
-  max-width: 400px;
+.lista {
+  margin: 2rem 0;
 }
-button:hover, .btn-primario:hover {
-  background: #004aad;
+.lista__title {
+  color: #002f6c;
+  margin-bottom: 1rem;
 }
 
-.btn-eliminar {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: red;
-  color: white;
-  cursor: pointer;
-  width: 100px;
-  box-sizing: border-box;
-}
-.btn-eliminar:hover {
-  background: rgb(191, 9, 9);
-}
-
-.btn-editar {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #0066ff;
-  color: white;
-  cursor: pointer;
-  width: 100px;
-  box-sizing: border-box;
-}
-.btn-editar:hover {
-  background: #002f6c;
-}
-
-table {
+.tabla {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
-table th, table td {
+.tabla__cell {
   border: 1px solid #333;
   padding: 8px;
   text-align: center;
 }
-table th {
+.tabla__cell--header {
   background: #002f6c;
   color: white;
-  text-align: center;
 }
 
-footer {
+.registro {
+  margin: 2rem 0;
+}
+.registro__title {
+  color: #002f6c;
+  margin-bottom: 1rem;
+}
+.registro__label {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+.registro__input {
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100px;
+  max-width: 400px;
+}
+.btn--primario {
+  background: #0066ff;
+  color: white;
+}
+.btn--primario:hover {
+  background: #004aad;
+}
+.btn--eliminar {
+  background: red;
+  color: white;
+}
+.btn--eliminar:hover {
+  background: rgb(191, 9, 9);
+}
+.btn--editar {
+  background: #0066ff;
+  color: white;
+}
+.btn--editar:hover {
+  background: #002f6c;
+}
+
+.footer {
   text-align: center;
   padding: 1rem;
   background: #002f6c;
   color: white;
   margin-top: 2rem;
-}
-
-#inicio {
-  background-color: #f5f7fa;
-  padding: 1rem;
-  border-radius: 8px;
 }

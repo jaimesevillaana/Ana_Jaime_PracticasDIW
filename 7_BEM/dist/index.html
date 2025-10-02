@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de MACs - IES Gregorio Prieto</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Registro de Direcciones MACs</h1>
+      <nav class="header" aria-label="Menú principal">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li class="nav__item"><a class="nav__link" href="#registro">Registro de MAC</a></li>
+          <li class="nav__item"><a class="nav__link" href="#lista">Lista de MACs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="clase" id="inicio">
+        <h2 class="clase__title">Seleccionar clase</h2>
+        <form class="clase__form">
+          <fieldset class="clase__fieldset">
+            <legend class="clase__legend">Elige el aula a gestionar</legend>
+            <label class="clase__label" for="clase">Clase:</label>
+            <select class="clase">select (name="clase" id="clase" required)
+              <option value="" disabled selected>-- Selecciona una clase --</option>
+              <option value="1daw">1º DAW</option>
+              <option value="2daw">2º DAW</option>
+              <option value="profes">Profesores</option>
+            </select>
+            <button class="btn btn--primario" type="submit" style="font-style: italic;">Cargar</button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="lista" id="lista">
+        <h2 class="lista__title">MACs Registradas</h2>
+        <table class="tabla">
+          <thead class="tabla__head">
+            <tr class="tabla__row">
+              <th class="tabla__cell" tabla__cell--header scope="col">Dirección MAC</th>
+              <th class="tabla__cell" tabla__cell--header scope="col">Comentario</th>
+              <th class="tabla__cell" tabla__cell--header scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody class="tabla__body">
+            <tr class="tabla__row">
+              <td class="tabla__cell">74:56:3C:59:E1:1D</td>
+              <td class="tabla__cell">PC_1DAW1</td>
+              <td class="tabla__cell">
+                <button class="btn btn--eliminar">Eliminar</button>
+                <button class="btn btn--editar">Editar</button>
+              </td>
+            </tr>
+            <tr class="tabla__row">
+              <td class="tabla__cell">88:9F:FA:23:45:BC</td>
+              <td class="tabla__cell">Portátil Ana</td>
+              <td class="tabla__cell">
+                <button class="btn btn--eliminar">Eliminar</button>
+                <button class="btn btn--editar">Editar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="registro" id="registro">
+        <h2 class="registro__title">Añadir Nueva MAC</h2>
+        <form class="registro__form">
+          <fieldset class="registro__fieldset">
+            <legend class="registro__legend">Formulario de alta</legend>
+            <label class="registro__label" for="mac">Dirección MAC:</label>
+            <input class="registro__input" type="text" id="mac" name="mac" placeholder="Ej: 74:56:3C:59:E1:1D" pattern="^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$" required>
+            <label class="registro__label" for="comentario">Comentario:</label>
+            <input class="registro__input" type="text" id="comentario" name="comentario" placeholder="Ej: Portátil Juan" minlength="3" maxlength="50" required>
+            <button class="btn btn--primario" type="submit">Añadir</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">© 2025 Departamento de Informática. IES Gregorio Prieto</p>
+    </footer>
+  </body>
+</html>

@@ -2733,7 +2733,7 @@
       "version": 322,
       "versionNonce": 668352538,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1758833930963,
       "link": null,
       "locked": false
@@ -2789,7 +2789,7 @@
       "version": 335,
       "versionNonce": 1461764230,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1758833989978,
       "link": null,
       "locked": false
