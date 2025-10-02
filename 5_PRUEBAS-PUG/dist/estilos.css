@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+}
+
+header {
+  background: #002f6c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+header h1 {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+header nav ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+header nav ul a:hover {
+  color: #0066ff;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+h2 {
+  color: #002f6c;
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+input, select {
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+button, .btn-primario {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #0066ff;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  max-width: 400px;
+}
+button:hover, .btn-primario:hover {
+  background: #004aad;
+}
+
+.btn-eliminar {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: red;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  box-sizing: border-box;
+}
+.btn-eliminar:hover {
+  background: rgb(191, 9, 9);
+}
+
+.btn-editar {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #0066ff;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  box-sizing: border-box;
+}
+.btn-editar:hover {
+  background: #002f6c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+table th, table td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+table th {
+  background: #002f6c;
+  color: white;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #002f6c;
+  color: white;
+  margin-top: 2rem;
+}
+
+#inicio {
+  background-color: #f5f7fa;
+  padding: 1rem;
+  border-radius: 8px;
+}

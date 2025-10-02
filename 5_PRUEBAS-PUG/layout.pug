@@ -1,22 +1,14 @@
-Doctype html 
+dDctype html 
 html(lang="es")
   head
     meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Gestión de Redes - IES Gregorio Prieto
-    link(rel="stylesheet" href="estilos.css")
+    link(rel="stylesheet", href="estilos.css")
   body
-    header
-      h1 Gestión de Redes
-      nav(aria-label="Menú principal")
-        ul
-          li
-            a(href="layout.html") Inicio
-          li
-            a(href="index.html") MACs
-          li
-            a(href="ips.html") IPs
+    include partials/header.pug
+
     main
       block content
-    footer
-      p © 2025 Departamento de Informática. IES Gregorio Prieto
+
+    include partials/footer.pug
