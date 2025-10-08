@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de MACs - IES Gregorio Prieto</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="bg-light text-dark">
+
+
+    <header class="bg-primary text-white text-center py-4 shadow-sm">
+        <h1 class="mb-3 text-uppercase">Registro de Direcciones MACs</h1>
+        <nav aria-label="Menú principal">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-bold" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-bold" href="#registro">Registro de MAC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-bold" href="#lista">Lista de MACs</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container bg-white rounded shadow-sm my-5 p-4">
+        <section id="inicio" class="mb-5">
+            <h2 class="text-primary mb-4">Seleccionar clase</h2>
+            <form>
+                <fieldset class="border rounded p-3">
+                    <legend class="fw-semibold text-secondary">Elige el aula a gestionar</legend>
+
+                    <div class="mb-3">
+                        <label for="clase" class="form-label fw-bold">Clase:</label>
+                        <select class="form-select" name="clase" id="clase" required>
+                            <option value="" disabled selected>-- Selecciona una clase --</option>
+                            <option value="1daw">1 DAW</option>
+                            <option value="2daw">2 DAW</option>
+                            <option value="profes">Profesores</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary fw-semibold fst-italic">Cargar</button>
+
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="lista" class="mb-5">
+            <h2 class="text-primary mb-4">MACs Registradas</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered align-middle text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">Dirección MAC</th>
+                            <th scope="col">Comentario</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4:56:3C:59:E1:1D</td>
+                            <td>PC_1DAW1</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm me-2">Eliminar</button>
+                                <button class="btn btn-primary btn-sm">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>88:9F:FA:23:45:BC</td>
+                            <td>Portatil Ana</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm me-2">Eliminar</button>
+                                <button class="btn btn-primary btn-sm">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="registro">
+            <h2 class="text-primary mb-4">Añadir nueva MAC</h2>
+            <form>
+                <fieldset class="border rounded p-3">
+                    <legend class="fw-semibold text-secondary">Formulario de alta </legend>
+
+                    <div class="mb-3">
+                        <label for="mac" class="form-label fw-bold">Dirección MAC:</label>
+                        <input 
+                        type="text"
+                        id="mac"
+                        name="mac"
+                        class="form-control"
+                        placeholder="Ej: 74:56:3C:59:E1:1D"
+                        pattern="^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+                        required
+                        />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comentario" class="form-label fw-bold">Comentario:</label>
+                        <input 
+                        type="text"
+                        id="comentario"
+                        name="comentario"
+                        class="form-control"
+                        placeholder="Ej: Portatil Pedro"
+                        minlength="3"
+                        maxlength="50"
+                        required
+                        />
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary fw-semibold">Añadir</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p class="mb-0"> 2025 Departamento de Informática. IES Gregorio Prieto</p>
+
+    </footer>
+</body>
+</html>
