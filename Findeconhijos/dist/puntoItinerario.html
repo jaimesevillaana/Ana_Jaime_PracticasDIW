@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finde con Hijos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top no-shadow">
+      <div class="container">
+        <!-- el href siempre a index.html--><a class="navbar-brand d-flex align-items-center" href="index.html"><i class="bi bi-geo-alt me-2"></i><span>AViajarFamilia</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Te recomendamos</a></li>
+            <li class="nav-item"><a class="nav-link" href="itinerarios.html">Mis itinerarios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Mi cuenta</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 pt-4">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="d-flex align-items-center mb-4"><img class="img-fluid rounded me-3" src="https://picsum.photos/seed/punto/400/300" alt="Ubicación">
+            <div class="flex-grow-1">
+              <h4 class="text-primary">Museo de Ciencia</h4>
+              <p class="text-muted">Qué ver: , qué hacer, dónde comer, cómo entretener a los niños.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-secondary">Comentarios</h5>
+          <ul class="list-group mb-3">
+            <li class="list-group-item">Usuario1: ¡Un sitio genial para ir con los peques!</li>
+            <li class="list-group-item">Usuario2: Recomiendo visitar la cafetería del museo.</li>
+          </ul>
+          <form>
+            <div class="mb-3">
+              <label class="form-label" for="comentario">Añadir comentario</label>
+              <textarea class="form-control" id="comentario" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+            </div>
+            <button class="btn btn-primary w-100" type="submit"><i class="bi bi-plus-lg me-1"></i>Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-light text-center text-dark py-3 fixed-bottom"><small>© 2025 AViajarFamilia · Todos los derechos reservados.</small></footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

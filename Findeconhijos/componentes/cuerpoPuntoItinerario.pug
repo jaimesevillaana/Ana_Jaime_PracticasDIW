@@ -1,0 +1,21 @@
+//- componentes/cuerpoPuntoItinerario.pug
+.container.mt-5.pt-4
+  .row
+    .col-md-8
+      .d-flex.align-items-center.mb-4
+        img.img-fluid.rounded.me-3(src="https://picsum.photos/seed/punto/400/300", alt="Ubicación")
+        .flex-grow-1
+          h4.text-primary Museo de Ciencia
+          p.text-muted Qué ver: , qué hacer, dónde comer, cómo entretener a los niños.
+    .col-md-4
+      h5.text-secondary Comentarios
+      ul.list-group.mb-3
+        li.list-group-item Usuario1: ¡Un sitio genial para ir con los peques!
+        li.list-group-item Usuario2: Recomiendo visitar la cafetería del museo.
+      form
+        .mb-3
+          label.form-label(for="comentario") Añadir comentario
+          textarea#comentario.form-control(rows="3", placeholder="Escribe tu comentario aquí...")
+        button.btn.btn-primary.w-100(type="submit")
+          i.bi.bi-plus-lg.me-1
+          | Enviar

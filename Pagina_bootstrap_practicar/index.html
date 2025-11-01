@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando con Bootstrap</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mi Sitio Bootstrap</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CABECERA -->
+    <header class="bg-light text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-primary">Bienvenido a Mi Página con Bootstrap</h1>
+        <p class="lead">Ejemplo práctico usando componentes de la documentación oficial.</p>
+        <a href="#servicios" class="btn btn-primary btn-lg">Ver más</a>
+      </div>
+    </header>
+
+
+    <!-- SECCIÓN DE TARJETAS -->
+    <main class="container my-5" id="servicios">
+      <h2 class="mb-4 text-center text-primary">Nuestros Servicios</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Servicio 1">
+            <div class="card-body">
+              <h5 class="card-title">Servicio 1</h5>
+              <p class="card-text">Descripción breve de este servicio.</p>
+              <button class="btn btn-outline-primary w-100">Más info</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <img src="https://picsum.photos/300/200?2" class="card-img-top" alt="Servicio 2">
+            <div class="card-body">
+              <h5 class="card-title">Servicio 2</h5>
+              <p class="card-text">Otra descripción breve.</p>
+              <button class="btn btn-outline-primary w-100">Más info</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <img src="https://picsum.photos/300/200?3" class="card-img-top" alt="Servicio 3">
+            <div class="card-body">
+              <h5 class="card-title">Servicio 3</h5>
+              <p class="card-text">Y una más.</p>
+              <button class="btn btn-outline-primary w-100">Más info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FORMULARIO -->
+    <section class="bg-light py-5" id="contacto">
+      <div class="container">
+        <h2 class="text-center text-primary mb-4">Formulario de Contacto</h2>
+        <form class="mx-auto" style="max-width: 600px;">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico:</label>
+            <input type="email" id="email" class="form-control" placeholder="tu@correo.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje:</label>
+            <textarea id="mensaje" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-3">
+      <p class="mb-0">© 2025 IES Gregorio Prieto - Página creada con Bootstrap 5</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

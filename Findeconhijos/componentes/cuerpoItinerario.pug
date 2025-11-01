@@ -1,0 +1,16 @@
+//- componentes/cuerpoItinerario.pug
+.container.mt-5.pt-4
+  .row.g-4
+    each val, index in [1,2,3,4,5,6]
+      .col-md-6
+        a.text-decoration-none.text-dark(href="puntoItinerario.html")
+          .card.border-0.p-3.no-shadow
+            .row.g-0.align-items-center
+              .col-md-5
+                img.img-fluid.rounded(src=`https://picsum.photos/seed/iti${index}/400/250`, alt="Imagen itinerario")
+              .col-md-7
+                .card-body
+                  h5.text-primary.text-start Punto del Itinerario #{index}
+                  p.text-muted.text-start Breve descripción del punto de itinerario con lugares interesantes para ver.
+                  .stars.text-start.mt-2
+                    span.text-warning ★★★★☆

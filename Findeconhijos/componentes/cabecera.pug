@@ -1,0 +1,27 @@
+//- componentes/cabecera.pug
+//- Detecta la página actual solo para saber qué icono mostrar.
+//- IMPORTANTE: el enlace del logo siempre va a index.html
+- const page = (typeof filename === 'string' && filename.includes('itinerarios')) ? 'itinerarios' : ((typeof filename === 'string' && filename.includes('punto')) ? 'punto' : 'index')
+
+nav.navbar.navbar-expand-lg.bg-light.fixed-top.no-shadow
+  .container
+    // el href siempre a index.html
+    a.navbar-brand.d-flex.align-items-center(href="index.html")
+      if page === 'index'
+        i.bi.bi-search.me-2
+      else if page === 'itinerarios'
+        i.bi.bi-bookmark.me-2
+      else
+        i.bi.bi-geo-alt.me-2
+      span AViajarFamilia
+
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarNav
+      ul.navbar-nav.ms-auto
+        li.nav-item
+          a.nav-link(href="index.html") Te recomendamos
+        li.nav-item
+          a.nav-link(href="itinerarios.html") Mis itinerarios
+        li.nav-item
+          a.nav-link(href="#") Mi cuenta
