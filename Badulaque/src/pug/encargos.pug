@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .container
+    h2 Encargos y Packs
+    p Elige uno de los packs prediseñados por Fede o crea el tuyo propio.
+
+    .row
+      each pack in ["Cumpleaños", "Cine", "Fiesta"]
+        .one-third.column
+          .card
+            h4 Pack #{pack}
+            ul
+              li 5 Bolsas de chuches
+              li 2 Refrescos
+              li 1 Sorpresa
+            button.button-primary(type="button") Encargar
+
+    hr
+    h3 Crea tu propio pack
+    form(action="#" method="post")
+      label(for="items") Selecciona tus productos:
+      select#items.u-full-width(name="items" multiple)
+        option Chicles
+        option Chocolatinas
+        option Refrescos
+        option Gominolas
+      input.button-primary(type="submit" value="Enviar encargo")

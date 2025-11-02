@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container
+    h2 Peticiones de Chuches
+    p Cuéntale a Fede qué productos te gustaría ver en la tienda.
+    form(action="#" method="post")
+      label(for="nombre") Nombre:
+      input#nombre.u-full-width(type="text" name="nombre" required)
+      label(for="email") Email:
+      input#email.u-full-width(type="email" name="email" required)
+      label(for="producto") Producto solicitado:
+      input#producto.u-full-width(type="text" name="producto")
+      label(for="comentarios") Comentarios:
+      textarea#comentarios.u-full-width(name="comentarios")
+      input.button-primary(type="submit" value="Enviar petición")

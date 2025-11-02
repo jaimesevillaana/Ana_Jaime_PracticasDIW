@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .container
+    h2 Nuestros Amigos
+    p Algunos de los clientes que nos alegran el día.
+    .row
+      each n in [1,2,3,4,5,6]
+        .four.columns
+          img(src=`../img/clientes/cliente${n}.jpg` alt=`Cliente ${n}`)
+          p.text-center Cliente #{n}

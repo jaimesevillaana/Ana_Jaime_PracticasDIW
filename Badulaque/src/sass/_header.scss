@@ -1,0 +1,11 @@
+header {
+  background-color: $color-secundario;
+  padding: 1rem;
+  h1 { color: $color-primario; }
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    a { color: $color-primario; text-decoration: none; }
+  }
+}
