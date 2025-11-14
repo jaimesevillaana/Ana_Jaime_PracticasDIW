@@ -1,17 +1,19 @@
+//Estilos miscelaneos y ajustes generales
+//Aplicar la bariable de fuente y color de texto a todo el body
 
-
-//- estilo para tarjetas en la galeria de amigos
-.card-amigo {
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 1px 3px rgba(0,0,0,0,1);
-
-    &:hover {
-        transform: translateY(-5px); //pequeño efecto al pasar el raton
-        box-shadow: 0 4px 6px rgba(0,0,0,0,15);
-    }
+body {
+    font: var(--color-general);
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo-claro);
 }
 
-.u-small {
-    font-size: 0.9rem;
-    color: var(--color-texto-principal);
+//estilo para enlaces usando la variable CSS nativa
+a {
+    color: var(--color-terciario);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-principal);
+        text-decoration: underline;
+    }
 }
