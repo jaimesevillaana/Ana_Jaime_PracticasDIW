@@ -1,0 +1,50 @@
+//- contenido para la seccion amigos (galeria de clientes)
+extends cabecera.pug
+
+block content 
+    //- Barra de navegación (copia la estructura para el menú)
+    nav.main-nav
+        .container
+            .row
+                .three.columns
+                    a.nav-logo(href="home.html") El Badulaque de Fede
+                .nine.columns
+                    ul.nav-links
+                        li: a(href="home.html") HOME
+                        li: a(href="amigos.html") AMIGOS
+                        li: a(href="peticiones.html") PETICIONES
+                        li: a(href="encargos.html") ENCARGOS
+
+    //- contenido de la galeria
+    .container
+        .row
+            .twelve-columns
+                h1.seccion-heading Nuestros Amigos
+                p.lead
+                    | Una galeria de fotos de clientes ilustres y no tan ilustres,
+                    | que han pasado por la tienda. ¡Gracias por la confianza!
+
+        //- galeria de fotos (4 columnas por fila, 3/12 cada una)
+        .row.galeria-amigos(style="margin-top: 40px;")
+
+            //- Fila 1
+            +fotoAmigo("Cliente frecuente 1", "El de los chicles", "uno")
+            +fotoAmigo("Cliente frecuente 2", "El de la Coca-Cola", "dos")
+            +fotoAmigo("Cliente frecuente 3", "El fan de las gominolas", "tres")
+
+            //- Fila 2
+            +fotoAmigo("Cliente ilustre 4", "El que paga con billetes grandes", "cuatro")
+            +fotoAmigo("Cliente 5", "El del pan", "cinco")
+            +fotoAmigo("Cliente 6", "El que siempre pregunta si hay pan", "seis")
+
+
+//- Mixin auxiliar pug para no repetir el codigo de cada tarjeta de foto
+mixin fotoAmigo(nombre, descripcion, clase)
+    //- el tamaño 'four' (4/12) hace que quepan 3 columnas por fila
+    .four.columns.u-text-center
+        .card-amigo(class=clase, style="background-color: var(--color-fondo-claro); padding: 15px; border: 10px solid var(--color-secundario); margin-bottom: 20px;")
+            //- placeholder para la imagen
+            .u-full-width(style="height: 15px; background-color: var(--color-cuaternario); margin-bottom: 10px; line-height: 15px; color: white;")
+                |
+            h5 #{nombre}
+            p.u-small #{descripcion}

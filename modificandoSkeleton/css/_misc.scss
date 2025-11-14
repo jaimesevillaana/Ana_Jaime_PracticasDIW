@@ -1,0 +1,17 @@
+
+
+//- estilo para tarjetas en la galeria de amigos
+.card-amigo {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,0,1);
+
+    &:hover {
+        transform: translateY(-5px); //pequeño efecto al pasar el raton
+        box-shadow: 0 4px 6px rgba(0,0,0,0,15);
+    }
+}
+
+.u-small {
+    font-size: 0.9rem;
+    color: var(--color-texto-principal);
+}
