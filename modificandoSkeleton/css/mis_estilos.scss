@@ -5,3 +5,8 @@
 @use 'mixins'; 
 @use 'tam_lg'; 
 @use 'nav_horizontal';
+
+// ... (contenido anterior) ...
+
+@use 'nav_horizontal'; 
+@use 'amigos'; // AÑADIR esta línea
