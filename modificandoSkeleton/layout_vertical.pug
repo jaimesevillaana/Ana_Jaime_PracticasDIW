@@ -1,0 +1,25 @@
+//- layout_vertical.pug
+doctype html
+html(lang="es")
+    block variables
+        - var pageTitle = "Panel";
+        
+    head
+        meta(charset="utf-8")
+        title #{pageTitle} | Panel Interno
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="dist/css/mis_estilos.css") 
+
+    body
+        .container-fluid
+            .row
+                .three.columns
+                    aside.sidebar-nav.nav-vertical
+                        h5 Gestión Interna
+                        ul.nav-links-vertical
+                            li: a(href="stock.html") Stock
+                            li: a(href="proveedores.html") Proveedores
+                
+                .nine.columns
+                    main
+                        block contenido_vertical
