@@ -1,0 +1,40 @@
+// css/_nav_vertical.scss
+@use 'variables';
+
+.nav-vertical {
+    background-color: variables.$color-fondo-claro;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    height: 100vh;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    
+    h5 {
+        color: variables.$color-principal;
+        margin-bottom: 20px;
+        border-bottom: 1px solid variables.$color-principal;
+        padding-bottom: 10px;
+    }
+
+    .nav-links-vertical {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+            margin-bottom: 10px;
+            
+            a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                color: #555;
+                &:hover {
+                    background-color: #f4f4f4;
+                    color: variables.$color-principal;
+                }
+            }
+        }
+    }
+}

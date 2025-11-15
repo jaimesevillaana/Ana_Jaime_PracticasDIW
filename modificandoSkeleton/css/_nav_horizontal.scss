@@ -1,0 +1,32 @@
+// css/_nav_horizontal.scss
+@use 'variables';
+
+.main-nav {
+    background-color: variables.$color-principal;
+    padding: 10px 0;
+    margin-bottom: 30px;
+
+    .nav-logo {
+        color: variables.$color-fondo-claro;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 38px;
+    }
+
+    .nav-links {
+        list-style: none;
+        text-align: right;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            margin-left: 15px;
+            
+            a {
+                color: variables.$color-fondo-claro;
+                text-decoration: none;
+                padding: 5px 0;
+            }
+        }
+    }
+}
