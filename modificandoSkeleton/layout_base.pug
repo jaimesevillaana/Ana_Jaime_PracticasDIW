@@ -1,0 +1,22 @@
+//- layout_base.pug
+//-Layout principal con menú horizontal
+
+doctype html
+html(lang="es")
+    block variables
+        - var pageTitle = "El Badulaque";
+        
+    head
+        meta(charset="utf-8")
+        title #{pageTitle} | El Badulaque de Fede
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="dist/css/mis_estilos.css") 
+
+    body
+        include _nav_horizontal.pug
+        
+        main.container
+            block content 
+        
+        footer.u-text-center(style="padding: 20px 0; border-top: 1px solid #eee; margin-top: 40px;")
+            p.u-small &copy; 2025 El Badulaque de Fede.
