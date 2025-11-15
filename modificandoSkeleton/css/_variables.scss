@@ -1,0 +1,14 @@
+// css/_variables.scss
+
+// 1. VARIABLES SASS (para uso interno de SCSS)
+$color-principal: #337ab7;
+$color-secundario: #5cb85c;
+$color-fondo-claro: #ffffff;
+$desktop-width: 992px;
+
+// 2. PROPIEDADES CSS (para uso en HTML/PUG si es necesario)
+:root {
+    --color-principal: #{$color-principal};
+    --color-secundario: #{$color-secundario};
+    --color-fondo-claro: #{$color-fondo-claro};
+}
