@@ -1,0 +1,38 @@
+//- peticiones.pug
+
+extends layout_base.pug
+
+block variables
+    - var pageTitle = "Peticiones";
+
+block content 
+    .container
+        .row
+            .twelve.columns
+                h1.section-heading Peticiones de Productos
+                p.lead
+                    | Usa este formulario para decirnos qué chuches o productos te gustaría
+                    | encontrar en la tienda.
+
+        .row(style="margin-top: 40px;")
+            .eight.columns.offset-by-two
+                form.formulario-peticiones
+
+                    .row
+                        .six.columns
+                            label(for="nombre_cliente") Tu Nombre
+                            input#nombre_cliente.u-full-width(type="text", placeholder="Ej: Pepito Pérez", required)
+                        .six.columns
+                            label(for="email_cliente") Tu Email
+                            input#email_cliente.u-full-width(type="email", placeholder="ejemplo@correo.com")
+
+                    label(for="producto_solicitado") Nombre del Chuches/Producto solicitado
+                    input#producto_solicitado.u-full-width(type="text", placeholder="Ej: Chocoflakes con extra de azúcar", required)
+
+                    label(for="comentarios") ¿Por qué te gustaría este producto?
+                    textarea#comentarios.u-full-width(placeholder="Añade cualquier detalle o comentario...")
+
+                    input.button-primary(type="submit", value="Enviar Petición al Fede")
+
+                    p.u-small.u-text-center(style="margin-top: 20px;")
+                        | * El Fede revisa todas las peticiones semanalmente.
