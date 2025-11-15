@@ -1,0 +1,30 @@
+//- home.pug
+
+extends layout_base.pug 
+
+block variables
+    - var pageTitle = "Home";
+
+block contenido
+    .row
+        .twelve.columns
+            h1.section-heading ¡Bienvenido al Badulaque de Fede!
+            p.lead La tienda que te hace vender más.
+
+    .row(style="margin-top: 40px;")
+        .eight.columns
+            h2 Sobre Nosotros
+            p
+                | Soy Federico Sánchez, el Fede, y mi objetivo es dar a conocer mi colmado.
+                | Aquí encontrarás desde golosinas ("chuches") hasta packs especiales para tus fiestas.
+            
+            h2 Nuestro Objetivo
+            p
+                | Esta web está pensada para que tú, el cliente, puedas hacer peticiones de productos 
+                | y encargar packs de cumpleaños a medida.
+
+        .four.columns
+            h3 Ubicación
+            p ¡Estamos justo al lado!
+            .u-full-width(style="height: 200px; background-color: var(--color-secundario); text-align: center; line-height: 200px;") 
+                strong Mapa / Foto de la Tienda
