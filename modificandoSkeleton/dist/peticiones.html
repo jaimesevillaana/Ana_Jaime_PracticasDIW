@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Peticiones | El Badulaque de Fede</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/mis_estilos.css">
+  </head>
+  <body>
+    <!-- Módulo de navegación principal horizontal-->
+    <nav class="main-nav">
+      <div class="container">
+        <div class="row">
+          <div class="three columns"><a class="nav-logo" href="home.html">El Badulaque de Fede</a></div>
+          <div class="nine columns">
+            <ul class="nav-links">
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="amigos.html">AMIGOS</a></li>
+              <li><a href="peticiones.html">PETICIONES</a></li>
+              <li><a href="encargos.html">ENCARGOS</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
+            <h1 class="section-heading">Peticiones de Productos</h1>
+            <p class="lead">
+              Usa este formulario para decirnos qué chuches o productos te gustaría
+              encontrar en la tienda.
+            </p>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 40px;">
+          <div class="eight columns offset-by-two">
+            <form class="formulario-peticiones">
+              <div class="row">
+                <div class="six columns">
+                  <label for="nombre_cliente">Tu Nombre</label>
+                  <input class="u-full-width" id="nombre_cliente" type="text" placeholder="Ej: Pepito Pérez" required>
+                </div>
+                <div class="six columns">
+                  <label for="email_cliente">Tu Email</label>
+                  <input class="u-full-width" id="email_cliente" type="email" placeholder="ejemplo@correo.com">
+                </div>
+              </div>
+              <label for="producto_solicitado">Nombre del Chuches/Producto solicitado</label>
+              <input class="u-full-width" id="producto_solicitado" type="text" placeholder="Ej: Chocoflakes con extra de azúcar" required>
+              <label for="comentarios">¿Por qué te gustaría este producto?</label>
+              <textarea class="u-full-width" id="comentarios" placeholder="Añade cualquier detalle o comentario..."></textarea>
+              <input class="button-primary" type="submit" value="Enviar Petición al Fede">
+              <p class="u-small u-text-center" style="margin-top: 20px;">* El Fede revisa todas las peticiones semanalmente.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="u-text-center" style="padding: 20px 0; border-top: 1px solid #eee; margin-top: 40px;">
+      <p class="u-small">&copy; 2025 El Badulaque de Fede.</p>
+    </footer>
+  </body>
+</html>
