@@ -22,18 +22,18 @@ block content
             .twelve.columns
                 h1.section-heading Encargos y Packs Especiales
                 p.lead
-                    | Encarga tu pack de chuches prediseñado por el Fede para fiestas y cumpleanos.
+                    | Encarga tu pack de chuches prediseñado por el Fede para fiestas y cumpleaños.
 
         //-Fila 1: Título de Packs (Corregida la 'ñ')
         .row(style="margin-top: 40px; margin-bottom: 20px;") 
             .twelve.columns
-                h2 Packs Predisenados del Fede
+                h2 Packs Prediseñados del Fede
 
         //-Fila 2: Packs de tarjetas
         .row.packs-predisenados(style="margin-bottom: 50px;")
-            +packCard("El Cumpleanero", "Ideal para 10-12 ninos.", "$25.00", "Bolsa grande de gominolas, 5 tipos de patatas, 12 bebidas.", "pack-cumple")
-            +packCard("El Fiestero", "Para cualquier reunion de adultos.", "$35.00", "Bebidas energeticas, snacks salados, chocolates premium.", "pack-fiesta")
-            +packCard("El Supremo", "¡Todo lo que se te ocurra!", "$50.00", "La seleccion mas variada de la tienda, 4kg de felicidad.", "pack-supremo")
+            +packCard("El Cumpleañero", "Ideal para 10-12 niños.", "25€", "Bolsa grande de gominolas, 5 tipos de patatas, 12 bebidas.", "pack-cumple")
+            +packCard("El Fiestero", "Para cualquier reunion de adultos.", "35€", "Bebidas energéticas, snacks salados, chocolates premium.", "pack-fiesta")
+            +packCard("El Supremo", "¡Todo lo que se te ocurra!", "50€", "La selección más variada de la tienda, 4kg de felicidad.", "pack-supremo")
 
         //-Fila 3: Título de formulario
         .row
@@ -47,15 +47,15 @@ block content
                 form.formulario-personalizado
                     label(for="tipo_evento") ¿Para qué tipo de evento es?
                     select#tipo_evento.u-full-width
-                        option(value="cumple") Cumpleanos
+                        option(value="cumple") Cumpleaños
                         option(value="fiesta") Fiesta temática
-                        option(value="reunion") Reunion familiar
+                        option(value="reunion") Reunión familiar
                         option(value="otro") Otro
 
                     label(for="num_personas") Número de Personas estimado
                     input#num_personas.u-full-width(type="number", min="1", required)
 
                     label(for="listado_productos") Listado de Productos Deseados (Sé específico)
-                    textarea#listado_productos.u-full-width(placeholder="Ej: 1kg de gomitas acidas, 5 bolsas de Cheetos, 10 latas de Fanta, etc.")
+                    textarea#listado_productos.u-full-width(placeholder="Ej: 1kg de gominolas acidas, 5 bolsas de Cheetos, 10 latas de Fanta, etc.")
 
                     input.button-primary.u-full-width(type="submit", value="Solicitar Presupuesto Personalizado")

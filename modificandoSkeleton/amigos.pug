@@ -14,20 +14,20 @@ mixin fotoAmigo(nombre, descripcion, clase)
             p.u-small #{descripcion}
 
 block content 
-    .container
+    
         .row
             .twelve.columns
                 h1.section-heading Nuestros Amigos
                 p.lead
-                    | Una galería de fotos de clientes ilustres, y no tan ilustres.
 
+        //--- FILA 1 (12 columnas) ---
         .row.galeria-amigos
-            // Fila 1
             +fotoAmigo("Pepe 'El Chicle'", "Siempre pide chicles de fresa", "uno")
             +fotoAmigo("María 'La Fresca'", "Viene por la bebida energética", "dos")
             +fotoAmigo("Javier 'El Golosina'", "Fan de las gominolas ácidas", "tres")
             
-            // Fila 2
+        //--- FILA 2 (12 columnas nuevas) ---
+        .row.galeria-amigos(style="margin-top: 30px;") 
             +fotoAmigo("Laura 'La Fiestera'", "La que encarga todos los packs", "cuatro")
             +fotoAmigo("Carlos 'El Vecino'", "Pasa a saludar y por el pan", "cinco")
             +fotoAmigo("Ana 'La Despistada'", "Siempre se olvida la cartera", "seis")

@@ -1,12 +1,14 @@
 //- _nav_horizontal.pug
-// Módulo de navegación principal horizontal
+//-Módulo de navegación principal horizontal
 
 nav.main-nav
     .container
         .row
             .three.columns
-                a.nav-logo(href="home.html") El Badulaque de Fede
+                a.nav-logo(href="home.html")
+                    img(src="../img/logo.png", alt="Logo El Badulaque de Fede", style="height: 120px;") 
             .nine.columns
+                button.nav-toggle.u-pull-right ☰
                 ul.nav-links
                     li: a(href="home.html") HOME
                     li: a(href="amigos.html") AMIGOS

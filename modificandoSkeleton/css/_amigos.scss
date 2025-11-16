@@ -6,4 +6,28 @@
     padding: 15px;
     margin-bottom: 20px;
     transition: transform 0.2s ease-in-out;
+    
+    min-height: 300px; // AÑADIDO: Altura mínima para la tarjeta completa
+    display: flex; // AÑADIDO: Usar Flexbox para alinear el contenido interno
+    flex-direction: column; // AÑADIDO: Organizar el contenido en columna
+    align-items: center; // AÑADIDO: Centrar horizontalmente el contenido
+
+    .placeholder-img {
+        background-color: #eee;
+        min-height: 120px; // AÑADIDO: Altura mínima para la imagen de relleno
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        flex-shrink: 0; // Evita que la imagen se encoja si hay mucho texto
+    }
+
+    h5 {
+        margin-bottom: 5px;
+    }
+
+    p.u-small {
+        flex-grow: 1; // Permite que la descripción ocupe el espacio restante
+    }
 }

@@ -1,31 +1,116 @@
+@charset "UTF-8";
 :root {
-  --color-principal: #337ab7;
+  --color-principal: #C3A5E5;
   --color-secundario: #5cb85c;
   --color-fondo-claro: #ffffff;
 }
 
 .main-nav {
-  background-color: #337ab7;
+  background-color: #C3A5E5;
   padding: 10px 0;
   margin-bottom: 30px;
+  /* --- CORRECCIÓN DE CABECERA EN MÓVIL --- */
+  /* --- ESTILOS HAMBURGUESA Y RESPONSIVE --- */
 }
-.main-nav .nav-logo {
+@media (max-width: 767px) {
+  .main-nav .container {
+    display: flex;
+    align-items: center;
+  }
+  .main-nav .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-nav .nine.columns {
+    display: flex;
+    /* Usamos flex para alinear el botón a la derecha */
+    justify-content: flex-end;
+    width: auto !important;
+    /* Permitir que sea lo más pequeño posible */
+    margin-left: 0 !important;
+  }
+  .main-nav .three.columns {
+    width: auto !important;
+    margin-left: 0 !important;
+  }
+}
+.main-nav .nav-logo a {
+  display: flex;
+  align-items: center;
+  height: 120px;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
-  line-height: 38px;
+}
+.main-nav .nav-logo a img {
+  height: 120px;
+}
+@media (max-width: 767px) {
+  .main-nav .nav-logo a img {
+    height: 60px;
+  }
+}
+.main-nav .nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  line-height: 1;
+  /* Resetear a 1 para que Flexbox lo centre */
+  cursor: pointer;
+  margin-right: 0;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .main-nav .nav-toggle {
+    display: none;
+  }
 }
 .main-nav .nav-links {
   list-style: none;
   text-align: right;
   margin: 0;
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #C3A5E5;
+  z-index: 1000;
+  /* Escritorio (min-width: 768px) */
 }
 .main-nav .nav-links li {
-  display: inline-block;
-  margin-left: 15px;
+  display: block;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .main-nav .nav-links li a {
   color: #ffffff;
   text-decoration: none;
-  padding: 5px 0;
+  font-size: 1.5em;
+  line-height: normal;
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .main-nav .nav-links {
+    display: flex !important;
+    position: static;
+    height: 120px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .main-nav .nav-links li {
+    display: inline-block;
+    margin-left: 15px;
+    border-bottom: none;
+  }
+  .main-nav .nav-links li a {
+    line-height: 120px;
+    font-size: 1.2em;
+    padding: 5px 0;
+  }
 }

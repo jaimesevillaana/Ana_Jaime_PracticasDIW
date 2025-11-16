@@ -6,26 +6,125 @@
     padding: 10px 0;
     margin-bottom: 30px;
 
+    /* --- CORRECCIÓN DE CABECERA EN MÓVIL --- */
+    @media (max-width: 767px) {
+        .container {
+            // Asegura que el contenedor de la nav use Flexbox para alinear el row
+            display: flex;
+            align-items: center;
+        }
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; // Alinea logo y botón a los extremos
+            align-items: center; // Centra verticalmente logo y botón
+        }
+
+        // Esconder el .nine.columns de la nav en móvil para evitar conflicto de apilamiento
+        .nine.columns {
+             display: flex; /* Usamos flex para alinear el botón a la derecha */
+             justify-content: flex-end;
+             width: auto !important; /* Permitir que sea lo más pequeño posible */
+             margin-left: 0 !important;
+        }
+        
+        .three.columns {
+            width: auto !important;
+            margin-left: 0 !important;
+        }
+    }
+    
     .nav-logo {
-        color: variables.$color-fondo-claro;
-        font-weight: bold;
-        text-decoration: none;
-        line-height: 38px;
+        a {
+            display: flex; 
+            align-items: center; 
+            
+            // Altura de escritorio por defecto, ajustamos en móvil
+            height: 120px; 
+            
+            color: variables.$color-fondo-claro;
+            font-weight: bold;
+            text-decoration: none;
+
+            img {
+                height: 120px; 
+                
+                // [NUEVO] Reducir tamaño del logo en móvil para eliminar el espacio
+                @media (max-width: 767px) {
+                    height: 60px; 
+                }
+            }
+        }
     }
 
+    /* --- ESTILOS HAMBURGUESA Y RESPONSIVE --- */
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: variables.$color-fondo-claro;
+        font-size: 2em;
+        line-height: 1; /* Resetear a 1 para que Flexbox lo centre */
+        cursor: pointer;
+        
+        // El margen-derecho no es necesario con Flexbox
+        margin-right: 0; 
+        z-index: 10;
+        
+        @media (min-width: 768px) {
+            display: none; 
+        }
+    }
+    
     .nav-links {
         list-style: none;
         text-align: right;
         margin: 0;
+        
+        display: none; 
+        position: absolute;
+        // Ajustamos la posición para el logo de 60px en móvil (60px altura + 20px padding)
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: variables.$color-principal;
+        z-index: 1000;
 
         li {
-            display: inline-block;
-            margin-left: 15px;
+            display: block;
+            margin: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             
             a {
                 color: variables.$color-fondo-claro;
                 text-decoration: none;
-                padding: 5px 0;
+                font-size: 1.5em;
+                line-height: normal;
+                padding: 15px 0;
+            }
+        }
+
+        /* Escritorio (min-width: 768px) */
+        @media (min-width: 768px) {
+            display: flex !important;
+            position: static;
+            height: 120px;
+            
+            align-items: center; 
+            justify-content: flex-end;
+
+            li {
+                display: inline-block;
+                margin-left: 15px;
+                border-bottom: none;
+
+                a {
+                    line-height: 120px;
+                    font-size: 1.2em;
+                    padding: 5px 0;
+                }
             }
         }
     }

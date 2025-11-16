@@ -5,10 +5,8 @@
 @use 'mixins'; 
 @use 'tam_lg';
 
-
 @use 'amigos';
 @use 'encargos';
-
 
 @use 'nav_horizontal'; 
 @use 'nav_vertical';
@@ -22,4 +20,57 @@ body {
     border-bottom: 2px solid variables.$color-secundario;
     padding-bottom: 10px;
     margin-bottom: 30px;
+}
+
+/* Estilos globales y Sticky Footer */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.container {
+    flex-grow: 1;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* --- SOLUCIÓN DEFINITIVA DE APILAMIENTO (FLEXBOX OVERRIDE) --- */
+// ESTE BLOQUE DEBE SER LO ÚLTIMO EN EL ARCHIVO COMPILADO
+@media (max-width: 767px) {
+    .row {
+        display: flex !important; // FUERZA FLEXBOX
+        flex-direction: column !important; // FUERZA APILAMIENTO
+        margin-bottom: 20px;
+    }
+    
+    // Anula el float y fuerza el ancho 100% para TODAS las columnas
+    .column,
+    .columns,
+    .one.column,
+    .two.columns,
+    .three.columns,
+    .four.columns,
+    .five.columns,
+    .six.columns,
+    .seven.columns,
+    .eight.columns,
+    .nine.columns,
+    .ten.columns,
+    .eleven.columns,
+    .twelve.columns {
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important; 
+        margin-left: 0 !important;
+    }
 }

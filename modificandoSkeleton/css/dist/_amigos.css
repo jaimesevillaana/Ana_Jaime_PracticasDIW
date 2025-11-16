@@ -1,5 +1,5 @@
 :root {
-  --color-principal: #337ab7;
+  --color-principal: #C3A5E5;
   --color-secundario: #5cb85c;
   --color-fondo-claro: #ffffff;
 }
@@ -9,4 +9,24 @@
   padding: 15px;
   margin-bottom: 20px;
   transition: transform 0.2s ease-in-out;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-amigo .placeholder-img {
+  background-color: #eee;
+  min-height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+.card-amigo h5 {
+  margin-bottom: 5px;
+}
+.card-amigo p.u-small {
+  flex-grow: 1;
 }

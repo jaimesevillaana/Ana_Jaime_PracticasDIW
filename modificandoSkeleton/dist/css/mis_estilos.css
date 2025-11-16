@@ -933,7 +933,7 @@ there.
 /* Larger than desktop */
 /* Larger than Desktop HD */
 :root {
-  --color-principal: #337ab7;
+  --color-principal: #C3A5E5;
   --color-secundario: #5cb85c;
   --color-fondo-claro: #ffffff;
 }
@@ -943,32 +943,137 @@ there.
   padding: 15px;
   margin-bottom: 20px;
   transition: transform 0.2s ease-in-out;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-amigo .placeholder-img {
+  background-color: #eee;
+  min-height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+.card-amigo h5 {
+  margin-bottom: 5px;
+}
+.card-amigo p.u-small {
+  flex-grow: 1;
 }
 
 .main-nav {
-  background-color: #337ab7;
+  background-color: #C3A5E5;
   padding: 10px 0;
   margin-bottom: 30px;
+  /* --- CORRECCIÓN DE CABECERA EN MÓVIL --- */
 }
-.main-nav .nav-logo {
+@media (max-width: 767px) {
+  .main-nav .container {
+    display: flex;
+    align-items: center;
+  }
+  .main-nav .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-nav .nine.columns {
+    display: flex; /* Usamos flex para alinear el botón a la derecha */
+    justify-content: flex-end;
+    width: auto !important; /* Permitir que sea lo más pequeño posible */
+    margin-left: 0 !important;
+  }
+  .main-nav .three.columns {
+    width: auto !important;
+    margin-left: 0 !important;
+  }
+}
+.main-nav .nav-logo a {
+  display: flex;
+  align-items: center;
+  height: 120px;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
-  line-height: 38px;
+}
+.main-nav .nav-logo a img {
+  height: 120px;
+}
+@media (max-width: 767px) {
+  .main-nav .nav-logo a img {
+    height: 60px;
+  }
+}
+.main-nav {
+  /* --- ESTILOS HAMBURGUESA Y RESPONSIVE --- */
+}
+.main-nav .nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  line-height: 1; /* Resetear a 1 para que Flexbox lo centre */
+  cursor: pointer;
+  margin-right: 0;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .main-nav .nav-toggle {
+    display: none;
+  }
 }
 .main-nav .nav-links {
   list-style: none;
   text-align: right;
   margin: 0;
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #C3A5E5;
+  z-index: 1000;
 }
 .main-nav .nav-links li {
-  display: inline-block;
-  margin-left: 15px;
+  display: block;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .main-nav .nav-links li a {
   color: #ffffff;
   text-decoration: none;
-  padding: 5px 0;
+  font-size: 1.5em;
+  line-height: normal;
+  padding: 15px 0;
+}
+.main-nav .nav-links {
+  /* Escritorio (min-width: 768px) */
+}
+@media (min-width: 768px) {
+  .main-nav .nav-links {
+    display: flex !important;
+    position: static;
+    height: 120px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .main-nav .nav-links li {
+    display: inline-block;
+    margin-left: 15px;
+    border-bottom: none;
+  }
+  .main-nav .nav-links li a {
+    line-height: 120px;
+    font-size: 1.2em;
+    padding: 5px 0;
+  }
 }
 
 .nav-vertical {
@@ -981,9 +1086,9 @@ there.
   left: 0;
 }
 .nav-vertical h5 {
-  color: #337ab7;
+  color: #C3A5E5;
   margin-bottom: 20px;
-  border-bottom: 1px solid #337ab7;
+  border-bottom: 1px solid #C3A5E5;
   padding-bottom: 10px;
 }
 .nav-vertical .nav-links-vertical {
@@ -1002,7 +1107,7 @@ there.
 }
 .nav-vertical .nav-links-vertical li a:hover {
   background-color: #f4f4f4;
-  color: #337ab7;
+  color: #C3A5E5;
 }
 
 /* Estilos globales */
@@ -1011,10 +1116,60 @@ body {
 }
 
 .section-heading {
-  color: #337ab7;
+  color: #C3A5E5;
   border-bottom: 2px solid #5cb85c;
   padding-bottom: 10px;
   margin-bottom: 30px;
+}
+
+/* Estilos globales y Sticky Footer */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex-grow: 1;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* --- SOLUCIÓN DEFINITIVA DE APILAMIENTO (FLEXBOX OVERRIDE) --- */
+@media (max-width: 767px) {
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 20px;
+  }
+  .column,
+  .columns,
+  .one.column,
+  .two.columns,
+  .three.columns,
+  .four.columns,
+  .five.columns,
+  .six.columns,
+  .seven.columns,
+  .eight.columns,
+  .nine.columns,
+  .ten.columns,
+  .eleven.columns,
+  .twelve.columns {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=mis_estilos.css.map */
